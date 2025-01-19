@@ -1,0 +1,39 @@
+.sidebar-link-image{
+  width:50px; 
+  padding-top:10px;
+}
+.sidebar-nav{
+  position: fixed;
+  top:37%;
+  /* left:10%; */
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  border-top-right-radius:5px;
+  border-bottom-right-radius:5px;
+  max-width: 60px;
+  background-color: grey;
+}
+.github-image{
+  width:50px;
+  height: 45px;
+  object-position: center;
+  object-fit: cover;
+}
+.linkedin-image{
+  padding-left:10px;
+  width:28px;
+}
+.email-image{
+  width:32px;
+  padding-left:8px;
+}
+.sidebar-links{
+  width:20px;
+}
+.instagram-image{
+  width:42px;
+  /* height:50px; */
+  object-fit: cover;
+  padding-left:2px;
+}

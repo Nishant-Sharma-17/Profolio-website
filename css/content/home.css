@@ -1,0 +1,50 @@
+.home-section{
+  display:grid;
+  grid-template-columns: 2fr 1fr;
+  /* background-color: aqua; */
+  padding-top:50px;
+}
+.about-div{
+  /* padding-top: 100px; */
+  /* background-color: lightcoral; */
+  padding-bottom:30px;
+}
+
+.my-image{
+  /* width:100%; */
+  width:300px;
+  height: 350px;
+  object-position:center;
+  object-fit:cover;
+}
+.image-div{
+/* background-color: lightgreen; */
+text-align: right;
+}
+.role
+{
+  margin:0;
+  font-size:80px;
+  font-weight: 400;
+}
+.resume-button
+{
+  margin-top: 20px;
+  width:115px;
+  height: 60px;
+  border:none;
+  border-radius: 10px;
+  font-family: roboto;
+  font-weight: 300;
+  font-size: large;
+  color:white;
+  background-color: rgb(14, 147, 255);
+  align-content: center;
+  align-self: center;
+}
+.resume-link-img{
+  /* background-color: black; */
+  height: 21px;
+  width:25px;
+  object-fit: cover;
+}
