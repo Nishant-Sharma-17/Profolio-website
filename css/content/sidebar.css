@@ -11,23 +11,16 @@
   align-items: center;
   /* background-color:lightcoral; */
 }
-.sidebar-div:hover{
-  /* border-top-right-radius:0px;  */
-  /* border-bottom-right-radius:0px; */
-}
 .sidebar-div{
   position: relative;
   background-color: grey;
-  width:90%;
+  width:100%;
   display: grid;
   height: 223px;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   row-gap: 5px;
   border-top-right-radius:5px; 
   border-bottom-right-radius:5px;
-}
-.sidebar-links{
-/* border: solid; */
 }
 .sidebar-links:hover{
   display:flex;
@@ -50,7 +43,7 @@
   border:none;
   width:130%;
   display:none;
-  left:75%;
+  left:48px;
   background-color: grey;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
