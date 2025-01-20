@@ -1,39 +1,107 @@
 .sidebar-link-image{
   width:50px; 
-  padding-top:10px;
+  /* background-color: lightblue; */
+  margin-right:10px;
 }
 .sidebar-nav{
   position: fixed;
   top:37%;
-  /* left:10%; */
   display:flex;
   flex-direction: column;
   align-items: center;
-  border-top-right-radius:5px;
-  border-bottom-right-radius:5px;
-  max-width: 60px;
+  /* background-color:lightcoral; */
+}
+.sidebar-div:hover{
+  /* border-top-right-radius:0px;  */
+  /* border-bottom-right-radius:0px; */
+}
+.sidebar-div{
+  position: relative;
   background-color: grey;
+  width:90%;
+  display: grid;
+  height: 223px;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  row-gap: 5px;
+  border-top-right-radius:5px; 
+  border-bottom-right-radius:5px;
+}
+.sidebar-links{
+/* border: solid; */
+}
+.sidebar-links:hover{
+  display:flex;
+  position:relative;
+  text-decoration:none;
+}
+.sidebar-links:hover .sidebar-links-text{
+  display:block;
+}
+.sidebar-links:hover{
+  left:20%;
+}
+.sidebar-links-text
+{
+  position:absolute;
+  font-family: roboto;
+  color:white;
+  font-size:20px;
+  background-color: transparent;
+  border:none;
+  width:130%;
+  display:none;
+  left:75%;
+  background-color: grey;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding-left:10px;
+  line-height: 50px;
 }
 .github-image{
   width:50px;
   height: 45px;
+  /* background-color: lightblue; */
   object-position: center;
   object-fit: cover;
 }
 .linkedin-image{
-  padding-left:10px;
+  margin-top:10px;
+  margin-left:12px;
+  object-position: center;
+  object-fit: cover;
+  height:30px;
   width:28px;
 }
 .email-image{
   width:32px;
-  padding-left:8px;
-}
-.sidebar-links{
-  width:20px;
+  height: 40px;
+  margin-left:8px;
+
 }
 .instagram-image{
   width:42px;
-  /* height:50px; */
-  object-fit: cover;
-  padding-left:2px;
+  object-fit:cover;
+  margin-left:5px;
+  margin-top:10px;
 }
+/* .sidebar-links {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.sidebar-links-text {
+  font-family: Roboto, sans-serif;
+  color: white;
+  font-size: 20px;
+  background-color: transparent;
+  border: none;
+  display: none; 
+  position: absolute;
+  top:30%;
+  left: 90%; 
+}
+
+.sidebar-links:hover .sidebar-links-text {
+  display: block; 
+} */
