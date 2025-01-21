@@ -13,7 +13,7 @@
 }
 .sidebar-div{
   position: relative;
-  background-color: grey;
+  background-color: rgb(47, 62, 87);
   width:100%;
   display: grid;
   height: 223px;
@@ -44,7 +44,7 @@
   width:130%;
   display:none;
   left:48px;
-  background-color: grey;
+  background-color: rgb(47, 62, 87);
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   padding-left:10px;
