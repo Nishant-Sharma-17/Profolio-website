@@ -1,10 +1,11 @@
-import {FastAverageColor} from './node_modules/fast-average-color/dist/index.js'
-
+import { FastAverageColor } from './node_modules/fast-average-color/dist/index.js'
+import { skillsArray } from './skills.js'
+// console.log(skillsArray);
 // Add smooth scrolling behavior to navigation links
 
 document.querySelectorAll('.sections-link').forEach((link) => {
 
-    link.addEventListener('click',function (event){
+    link.addEventListener('click', function (event) {
 
         event.preventDefault(); // Prevent default anchor behavior
 
@@ -15,32 +16,32 @@ document.querySelectorAll('.sections-link').forEach((link) => {
         const targetElement = document.querySelector(targetId);
 
         // Scroll to the target element smoothly
-        targetElement.scrollIntoView({ behavior:'smooth',block:'start',inline:'start'});
+        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'start' });
     });
 });
-window.addEventListener('load',function(){
-    const fac=new FastAverageColor();
-    document.querySelectorAll('.skills .skill-button').forEach((button)=>{
-        const element =button.querySelector('img');
-       if(element){
-        const color =fac.getColor(element).rgb;
-        // console.log(color.rgb);
-        button.style.boxShadow=`0px 3px 7px ${color}`
-    }
-    else
-    {
-    button.style.boxShadow=`0px 3px 7px antiquewhite`
-       }
-        // console.log(button);
-        // console.log(element)
-        // console.log(fac.getColor(element));
-        // button.style.boxShadow=' 0px 3px 7px blue'
+function generateSkillButton(){
+    let allSkills=``;
+    skillsArray.forEach((skill)=>{
+        allSkills+=`<button class="skill-button"><img class="${skill.name}"src="${skill.image}"><p class="skill-text">${skill.name.toUpperCase()}</p></button>`
     });
-    
-    // const color=fac.getColor(document.querySelector('.my-image'));
-    // console.log(color.rgb);
-    // console.log(fac.getColor(document.querySelector('.my-image')).rgb);
-    // const sidebarDiv=document.querySelector('.sidebar-div');
-    // console.log(sidebarDiv);
-    // sidebarDiv.style.backgroundColor=color.rgb;
+    document.querySelector('.skills').innerHTML=allSkills;
+}
+ window.addEventListener('load', function () {
+    const fac = new FastAverageColor();
+    function generateShadows(fac) {
+        document.querySelectorAll('.skills .skill-button img').forEach((image) => {
+            // Ensure the image is fully loaded and has valid dimensions
+            if (image.complete && image.naturalWidth > 0 && image.naturalHeight > 0) {
+                const color = fac.getColor(image).rgb;
+                // console.log(`Shadow color for ${image.src}: ${color}`);
+                image.parentElement.style.boxShadow = `0px 3px 7px ${color}`;
+            } else {
+                // console.warn(`Invalid or unloaded image: ${image.src}`);
+                image.parentElement.style.boxShadow = `0px 3px 7px antiquewhite`;
+            }
+        });
+    }
+
+    generateSkillButton();
+    generateShadows(fac);
 });
