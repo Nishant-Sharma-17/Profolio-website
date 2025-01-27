@@ -1,6 +1,5 @@
 import { FastAverageColor } from './node_modules/fast-average-color/dist/index.js'
 import { skillsArray } from './skills.js'
-// console.log(skillsArray);
 // Add smooth scrolling behavior to navigation links
 
 document.querySelectorAll('.sections-link').forEach((link) => {
@@ -30,17 +29,22 @@ function generateSkillButton(){
     const fac = new FastAverageColor();
     function generateShadows(fac) {
         document.querySelectorAll('.skills .skill-button img').forEach((image) => {
-            // Ensure the image is fully loaded and has valid dimensions
-            if (image.complete && image.naturalWidth > 0 && image.naturalHeight > 0) {
-                const color = fac.getColor(image).rgb;
-                // console.log(`Shadow color for ${image.src}: ${color}`);
-                image.parentElement.style.boxShadow = `0px 3px 7px ${color}`;
-            } else {
-                console.warn(`Invalid or unloaded image: ${image.src}`);
-                image.parentElement.style.boxShadow = `0px 3px 7px antiquewhite`;
-            }
+            const defaultColor = 'rgba(211, 211, 211 ,0.5)'; // Light gray fallback
+            image.addEventListener('load', () => {
+                try {
+                    const color = fac.getColor(image).rgb || defaultColor;
+                    image.parentElement.style.boxShadow = `0px 3px 7px ${color}`;
+                } catch {
+                    image.parentElement.style.boxShadow = `0px 3px 7px ${defaultColor}`;
+                }
+            });
+            image.addEventListener('error',()=>{
+                image.parentElement.style.boxShadow=`0px 3px 7px ${defaultColor}`
+            });
         });
+        
     }
+    
 
     generateSkillButton();
     generateShadows(fac);
