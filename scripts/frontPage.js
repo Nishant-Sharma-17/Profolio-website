@@ -36,7 +36,7 @@ function generateSkillButton(){
                 // console.log(`Shadow color for ${image.src}: ${color}`);
                 image.parentElement.style.boxShadow = `0px 3px 7px ${color}`;
             } else {
-                // console.warn(`Invalid or unloaded image: ${image.src}`);
+                console.warn(`Invalid or unloaded image: ${image.src}`);
                 image.parentElement.style.boxShadow = `0px 3px 7px antiquewhite`;
             }
         });

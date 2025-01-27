@@ -1,15 +1,14 @@
 .sidebar-link-image{
   width:50px; 
-  /* background-color: lightblue; */
   margin-right:10px;
 }
 .sidebar-nav{
   position: fixed;
   top:37%;
+  left:0%;
   display:flex;
   flex-direction: column;
-  align-items: center;
-  /* background-color:antiquewhite; */
+  align-self: center;
 }
 .sidebar-div{
   position: relative;
@@ -69,32 +68,75 @@
   width:32px;
   height: 40px;
   margin-left:8px;
-
 }
 .instagram-image{
   width:42px;
   object-fit:cover;
+  object-position: center;
   margin-left:5px;
   margin-top:10px;
 }
-/* .sidebar-links {
-  position: relative;
-  display: inline-block;
+@media(max-width:870px)
+{
+  .sidebar-nav{
+    position: relative;
+    display:flex;
+    top:-440px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .sidebar-div{
+    background-color: rgb(47, 62, 87);
+    width: 300px;    
+    display: grid;
+    height: 50px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    border-radius: 5px;
+    row-gap: 0px;
+    padding:5px 0px;
+    margin:0px;
+  }
+  .sidebar-links{
   text-align: center;
-}
+  align-self: center;
+  align-items: center;
+  }
+  .sidebar-links:hover .sidebar-links-text{
+    display: none;
+  }
+  .sidebar-links:hover{
+    display:inline;
+    position:static;
+    text-decoration:none;
+    /* left: 0%; */
+  }
+  .instagram-image{
+    width:45px;
+    object-fit:cover;
+    object-position: top;
+    margin:0px
+  }
+  .github-image{
+    width:50px;
+    height: 45px;
+    object-position: center;
+    object-fit: cover;
+    margin:0px;
+  }
+  .linkedin-image{
+    /* margin-top:5px; */
+    align-self: center;
+    margin-left:0px;
+    margin:0px;
+    object-position: center;
+    object-fit: cover;
+    height:30px;
+    width:30px;
 
-.sidebar-links-text {
-  font-family: Roboto, sans-serif;
-  color: white;
-  font-size: 20px;
-  background-color: transparent;
-  border: none;
-  display: none; 
-  position: absolute;
-  top:30%;
-  left: 90%; 
+  }
+  .email-image{
+    width:32px;
+    height: 40px;
+    margin:0px;
+  }
 }
-
-.sidebar-links:hover .sidebar-links-text {
-  display: block; 
-} */

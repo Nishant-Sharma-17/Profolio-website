@@ -1,24 +1,20 @@
 .home-section{
   display:grid;
   grid-template-columns: 2fr 1fr;
-  /* background-color: aqua; */
   padding-top:50px;
 }
 .about-div{
-  /* padding-top: 100px; */
-  /* background-color: lightcoral; */
   padding-bottom:30px;
 }
 
 .my-image{
-  /* width:100%; */
   width:300px;
   height: 350px;
   object-position:center;
   object-fit:cover;
+  border-radius: 10px;
 }
 .image-div{
-/* background-color: lightgreen; */
 text-align: right;
 }
 .role
@@ -34,8 +30,8 @@ text-align: right;
   height: 60px;
   border:none;
   border-radius: 10px;
-  font-family: roboto;
-  font-weight: 300;
+  font-family:roboto;
+  font-weight:300;
   font-size: large;
   color:white;
   background-color: rgb(14, 147, 255);
@@ -43,8 +39,38 @@ text-align: right;
   align-self: center;
 }
 .resume-link-img{
-  /* background-color: black; */
   height: 21px;
   width:25px;
   object-fit: cover;
+}
+@media(max-width:1000px) and (min-width:870px)
+{
+  .image-div{
+    padding-top: 10%;
+    }
+  .my-image{
+    width:250px;
+    object-position:center;
+    object-fit:cover;
+    border-radius: 10px;
+  }
+}
+@media(max-width:870px)
+{
+  .home-section{
+    display:grid;
+    grid-template-columns:1fr;
+    padding-top:50px;
+  }
+  .my-image{
+    padding-top:10%;
+    width:300px;
+    height: 350px;
+    object-position:center;
+    object-fit:cover;
+    border-radius: 10px;
+  }
+  .image-div{
+  text-align: center;
+  }
 }

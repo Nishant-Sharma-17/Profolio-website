@@ -11,8 +11,8 @@ body{
   scroll-behavior: smooth;
 }
 .page-sector{
-  padding-left:250px;
-  padding-right:250px;
+  padding-left:17%;
+  padding-right:17%;
     background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(72, 72, 72, 0.5));
     /* background-image: linear-gradient(black,rgb(48, 48, 48)); */
 }
@@ -26,6 +26,7 @@ body{
   background-color:black;
   margin-top:0px;
   min-height:60px;
+  z-index: 1000;
 }
 .upper-right
 {
@@ -41,11 +42,6 @@ a{
   font-weight: 300;
   padding:0px 5px;
   margin-top:0px;
-}
-.menu-img
-{
-  width:40px;
-  height:40px;
 }
 .about-me ,.personnel-info{
   font-size: 25px;
@@ -71,4 +67,22 @@ a{
   /* background-color: aliceblue; */
   justify-content: space-between;
   align-items:center ;
+}
+@media (max-width:1280px)
+{
+  .page-sector{
+    padding-left:8%;
+    padding-right:8%;
+      background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(72, 72, 72, 0.5));
+      /* background-image: linear-gradient(black,rgb(48, 48, 48)); */
+  }
+}
+@media (max-width:1150px)
+{
+  .page-sector{
+    padding-left:9%;
+    padding-right:2%;
+      background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(72, 72, 72, 0.5));
+      /* background-image: linear-gradient(black,rgb(48, 48, 48)); */
+  }
 }

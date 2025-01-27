@@ -29,3 +29,11 @@ font-size: 23px;
   height: 103%;
   background-color: rgb(43, 43, 43);
 }
+@media(max-width:800px){
+  .skills{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:20px; 
+    /* background-color: lightpink; */
+  }
+}
