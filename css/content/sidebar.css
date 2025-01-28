@@ -13,6 +13,7 @@
 .sidebar-div{
   position: relative;
   background-color: rgb(47, 62, 87);
+  background-color: rgb(0, 0, 0);
   width:100%;
   display: grid;
   height: 223px;
@@ -43,8 +44,8 @@
   width:130%;
   display:none;
   left:48px;
-  background-color: rgb(47, 62, 87);
-  border-top-right-radius: 5px;
+  background-color: rgb(0, 0, 0);
+    border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   padding-left:10px;
   line-height: 50px;
@@ -86,7 +87,8 @@
     align-items: center;
   }
   .sidebar-div{
-    background-color: rgb(47, 62, 87);
+    background-color: rgb(0, 0, 0);
+    /* background-color: transparent; */
     width: 300px;    
     display: grid;
     height: 50px;
@@ -102,7 +104,7 @@
   align-items: center;
   }
   .sidebar-links:hover .sidebar-links-text{
-    display: none;
+    display:none;
   }
   .sidebar-links:hover{
     display:inline;
