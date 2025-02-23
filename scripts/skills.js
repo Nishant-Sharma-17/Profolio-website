@@ -23,8 +23,4 @@ export const skillsArray = [
     name: 'oops',
     image:''
   },
-  {
-    name: 'jasmine-framework',
-    image:'css/pictures/icon/icons8-jasmine-framework-96.png'
-  }
 ];

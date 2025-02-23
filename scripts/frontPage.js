@@ -42,10 +42,8 @@ function generateSkillButton(){
                 image.parentElement.style.boxShadow=`0px 3px 7px ${defaultColor}`
             });
         });
-        
     }
     
-
     generateSkillButton();
     generateShadows(fac);
 });
